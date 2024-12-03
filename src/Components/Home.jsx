@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { baseURL } from "./Api/baseURL";
+import { baseURL } from "../Api/baseURL";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -33,8 +33,8 @@ export default function Home() {
   };
 
   return (
-    <div className="container-fluid bg-primary vh-100 vw-100 text-white">
-      <h3 style={{ textAlign: "center" }}>Students</h3>
+    <div className="container-fluid vh-100 vw-100 text-white">
+      <h3 className="text-center my-4">Students</h3>
       <div className="d-flex justify-content-end my-3">
         <Link className="btn btn-success" to="/create">
           Add Student

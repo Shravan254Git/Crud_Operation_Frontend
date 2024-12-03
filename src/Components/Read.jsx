@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { baseURL } from "./Api/baseURL";
+import { baseURL } from "../Api/baseURL";
 import { Link, useParams } from "react-router-dom";
 
 export default function Read() {
@@ -19,9 +19,9 @@ export default function Read() {
   }, [id]);
 
   return (
-    <div className="container-fluid bg-primary vh-100 vw-100">
-      <h3 style={{ textAlign: "center" }}>User {id}</h3>
-      <Link className="btn btn-success mt-2 mb-1" to="/">
+    <div className="container-fluid vh-100 vw-100">
+      <h3 style={{color:'white'}} className="text-center my-4">User {id}</h3>
+      <Link className="btn btn-dark mt-2 mb-1" to="/home">
         Back
       </Link>
 
