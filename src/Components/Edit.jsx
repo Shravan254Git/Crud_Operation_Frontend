@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { baseURL } from "./Api/baseURL";
+import { baseURL } from "../Api/baseURL";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function Edit() {
@@ -26,7 +26,7 @@ export default function Edit() {
     axios
       .put(`${baseURL}/edit_user/${id}`, data[0])
       .then((res) => {
-        navigate("/");
+        navigate("/home");
         console.log(res.data);
       })
       .catch((err) => {
@@ -35,9 +35,9 @@ export default function Edit() {
   };
 
   return (
-    <div className="container-fluid bg-primary vh-100 vw-100">
-      <h3 style={{ textAlign: "center" }}>User {id}</h3>
-      <Link className="btn btn-success mt-2 mb-1" to="/">
+    <div className="container-fluid vh-100 vw-100" style={{backgroundColor:'#536c89'}}>
+      <h3 style={{color:'white'}} className="text-center my-4">User {id}</h3>
+      <Link className="btn btn-dark mt-2 mb-1" to="/home">
         Back
       </Link>
 
@@ -45,7 +45,7 @@ export default function Edit() {
         return (
           <form onSubmit={handleFormSubmission}>
             <div className="form-group mb-3">
-              <label htmlFor="name">Name</label>
+              <label style={{color:'white'}} htmlFor="name">Name</label>
               <input
                 type="text"
                 id="name"
@@ -58,7 +58,7 @@ export default function Edit() {
               />
             </div>
             <div className="form-group mb-3">
-              <label htmlFor="email">Email</label>
+              <label style={{color:'white'}} htmlFor="email">Email</label>
               <input
                 type="email"
                 id="email"
@@ -71,7 +71,7 @@ export default function Edit() {
               />
             </div>
             <div className="form-group mb-3">
-              <label htmlFor="age">Age</label>
+              <label style={{color:'white'}} htmlFor="age">Age</label>
               <input
                 type="number"
                 id="age"
@@ -82,7 +82,7 @@ export default function Edit() {
               />
             </div>
             <div className="form-group mb-3">
-              <label htmlFor="gender">Gender</label>
+              <label style={{color:'white'}} htmlFor="gender">Gender</label>
               <input
                 type="text"
                 id="gender"

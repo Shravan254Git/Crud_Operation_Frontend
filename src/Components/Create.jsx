@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import { baseURL } from "./Api/baseURL";
+import { baseURL } from "../Api/baseURL";
 
 export default function Create() {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ export default function Create() {
     axios
       .post(`${baseURL}/add_user`, values)
       .then((res) => {
-        navigate("/");
+        navigate("/home");
         console.log(res.data);
       })
       .catch((err) => {
@@ -28,18 +28,18 @@ export default function Create() {
   };
 
   return (
-    <div className="container-fluid vh-100 vw-100 bg-primary text-white">
+    <div className="container-fluid vh-100 vw-100 text-white">
       <div className="row justify-content-center">
         <div className="col-md-6">
           <h3 className="text-center my-4">Add Student</h3>
           <div className="d-flex justify-content-end mb-3">
-            <Link to="/" className="btn btn-success">
+            <Link to="/home" className="btn btn-success">
               Home
             </Link>
           </div>
           <form onSubmit={handleFormSubmission}>
             <div className="form-group mb-3">
-              <label htmlFor="name">Name</label>
+              <label style={{color:'white'}} htmlFor="name">Name</label>
               <input
                 type="text"
                 id="name"
@@ -50,7 +50,7 @@ export default function Create() {
               />
             </div>
             <div className="form-group mb-3">
-              <label htmlFor="email">Email</label>
+              <label style={{color:'white'}} htmlFor="email">Email</label>
               <input
                 type="email"
                 id="email"
@@ -61,7 +61,7 @@ export default function Create() {
               />
             </div>
             <div className="form-group mb-3">
-              <label htmlFor="age">Age</label>
+              <label style={{color:'white'}} htmlFor="age">Age</label>
               <input
                 type="number"
                 id="age"
@@ -72,7 +72,7 @@ export default function Create() {
               />
             </div>
             <div className="form-group mb-3">
-              <label htmlFor="gender">Gender</label>
+              <label style={{color:'white'}} htmlFor="gender">Gender</label>
               <input
                 type="text"
                 id="gender"

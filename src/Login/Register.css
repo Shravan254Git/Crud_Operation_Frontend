@@ -1,0 +1,166 @@
+/* General Reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #536c89; /* #f5f5f5 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Form Container */
+section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+}
+
+/* Form Title */
+section h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Fields */
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Validation Icons */
+.valid {
+  color: #28a745;
+  margin-left: 8px;
+}
+
+.invalid {
+  color: #dc3545;
+  margin-left: 8px;
+}
+
+/* Instructions */
+.instructions {
+  font-size: 14px;
+  background: #333;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #f8f9fa;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+.instructions span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.offscreen {
+  display: none;
+}
+
+/* Error Message */
+.errmsg {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button[type="submit"]:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.hide {
+  display: none;
+}
+
+/* General styling for the paragraph */
+/* p {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-top: 20px;
+} */
+
+/* Styling the line class (for the anchor container) */
+.line {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* Styling the anchor link */
+.line a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.line a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  section {
+    padding: 15px;
+  }
+
+  form input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
